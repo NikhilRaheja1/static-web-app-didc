@@ -1,1 +1,48 @@
-
+{
+  "id": "did:web:witty-tree-0d6c34610.3.azurestaticapps.net",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:witty-tree-0d6c34610.3.azurestaticapps.net"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://witty-tree-0d6c34610.3.azurestaticapps.net/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/c042c730-feb2-4ddd-a0d7-a1af913da591"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#177aa2ed2db64cc394fc9a033aca4daavcSigningKey-49870",
+      "controller": "did:web:witty-tree-0d6c34610.3.azurestaticapps.net",
+      "type": "EcdsaSecp256k1VerificationKey2019",
+      "publicKeyJwk": {
+        "crv": "secp256k1",
+        "kty": "EC",
+        "x": "B5pNVDBnwdJFMkWkv6GU2-2ewgf_zrlH7_n3XX68NWc",
+        "y": "IVLa39CIRWoaMKxLErc0K4OGNWLmS-uLtnOa0qXAldU"
+      }
+    }
+  ],
+  "authentication": [
+    "#177aa2ed2db64cc394fc9a033aca4daavcSigningKey-49870"
+  ],
+  "assertionMethod": [
+    "#177aa2ed2db64cc394fc9a033aca4daavcSigningKey-49870"
+  ]
+}
